@@ -3,9 +3,11 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="{{ page.body_classes }}">
 
-    {% include header.html %}
+    <header>
+      <h1>Cookbook</h1>
+    </header>
 
     <main role="main">
       {{ content }}
