@@ -1,0 +1,9 @@
+/*
+The main SCSS file for everything, yep
+*/
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #EEE;
+  color: #222; }
