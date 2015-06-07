@@ -4,7 +4,13 @@
 @import "normalize";
 @import "defaults";
 
+@import "header";
+
 @import "forms";
 @import "buttons";
 
 @import "signin";
+
+#__bs_notify__ {
+  display: none !important;
+}

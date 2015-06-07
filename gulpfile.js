@@ -129,7 +129,7 @@ gulp.task("doctor", $.shell.task("jekyll doctor"));
 // between them.
 gulp.task("serve:dev", ["styles", "jekyll:dev"], function () {
   bs = browserSync({
-    notify: true,
+    notify: false,
     // tunnel: "",
     server: {
       baseDir: "serve"

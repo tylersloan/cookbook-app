@@ -18,14 +18,15 @@ body {
     line-height: 1.55;
 }
 
-a,
-button {
-    &:hover,
-    &:focus {
-        background: darken($color--medium,10%);
-    }
-}
-
 main {
     position: relative;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $color--medium;
+  }
 }
