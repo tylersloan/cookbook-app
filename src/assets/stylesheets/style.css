@@ -354,6 +354,7 @@ input, textarea {
   padding: 1.5em; }
   .form--signin {
     background: #CCC;
+    max-width: 425px;
     width: 50%; }
   .form__fieldset {
     margin-bottom: 1em; }

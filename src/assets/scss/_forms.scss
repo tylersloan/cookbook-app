@@ -16,6 +16,7 @@ textarea {
         @extend %centeredXY;
         @extend %z1-shadow;
         background: $color--medium;
+        max-width: 425px;
         width: 50%;
     }
 
