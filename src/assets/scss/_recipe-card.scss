@@ -1,0 +1,16 @@
+.recipe-card {
+    color: $color--dark;
+    flex-basis: percentage(1/4);
+    padding: 0 .25em 3em;
+    text-align: center;
+
+    &__thumbnail {
+        background: $color--medium;
+        display: block;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}

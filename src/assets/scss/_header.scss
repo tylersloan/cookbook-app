@@ -1,6 +1,5 @@
 header {
   background: $color--dark;
-  display: flex;
   padding: 2em 5%;
 }
 
@@ -14,7 +13,6 @@ h1 {
 
 .user-controls {
   color: $color--light;
-  flex: 1 1 auto;
   text-align: right;
 
   a {
