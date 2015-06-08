@@ -6,3 +6,89 @@ body_classes: create-recipe
 
 signedin: true
 ---
+
+<section class="wrapper">
+    <div class="flex-container">
+        <form class="form form--create-recipe" action="">
+
+            <div class="form__fieldset">
+                <label class="form__label" for="image">Image</label>
+                <input type="file" class="form__input" id="image">
+            </div>
+
+            <div class="form__fieldset">
+                <label class="form__label" for="recipe-name">Recipe name:</label>
+                <input type="text" class="form__input" id="recipe-name">
+            </div>
+
+            <div class="form__fieldset">
+                <label class="form__label" for="recipe-author">Recipe by:</label>
+                <input type="text" class="form__input" id="recipe-author">
+            </div>
+
+            <div class="form__fieldset">
+                <label class="form__label" for="recipe-type">Recipe Type</label>
+                <select name="recipe-type" id="recipe-type">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                    <option value="dessert">Dessert</option>
+                </select>
+            </div>
+
+            <div class="form__fieldset">
+                <label class="form__label" for="prep-time">Prep Time</label>
+                <input type="text" class="form__input" id="prep-time">
+            </div>
+
+            <div class="form__fieldset">
+                <label class="form__label" for="cook-time">Cook Time</label>
+                <input type="text" class="form__input" id="cook-time">
+            </div>
+
+            <div class="form__fieldset">
+                <label class="form__label" for="Cook Temperature">Cook Temperature</label>
+                <input type="text" class="form__input" id="Cook Temperature">
+            </div>
+
+            <hr>
+
+            <p>How many of what will this recipe yield?</p>
+
+            <div class="form__fieldset">
+                <label class="form__label" for="yield-amount">How many?</label>
+                <input type="text" class="form__input" id="yield-amount">
+            </div>
+
+            <div class="form__fieldset">
+                <label class="form__label" for="yield-value">What?</label>
+                <input type="text" class="form__input" id="yield-value">
+            </div>
+
+            <hr>
+
+            <p>Ingredients</p>
+
+            <div class="form__fieldset">
+                <label class="form__label" for="ingredient">Ingredient</label>
+                <input type="text" class="form__input" id="ingredient">
+            </div>
+
+            <button id="js-add-ingredient" class="button button--dark">Add Another Ingredient</button>
+
+            <hr>
+
+            <div class="form__fieldset">
+                <label class="form__label" for="recipe-directions">Directions:</label>
+                <input type="text" class="form__input" id="recipe-directions    ">
+            </div>
+
+            <div class="form__fieldset">
+                <label class="form__label" for="other-notes">Any other notes?</label>
+                <input type="text" class="form__input" id="other-notes">
+            </div>
+
+            <button class="button button--dark" id="js-save-recipe" type="submit">Save Recipe</button>
+        </form>
+    </div>
+</section>
