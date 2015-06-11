@@ -167,7 +167,7 @@ input, textarea {
   -webkit-flex-basis: 25%;
       -ms-flex-preferred-size: 25%;
           flex-basis: 25%;
-  padding: 0 .25em 3em;
+  margin: 0 .25em 3em;
   text-align: center; }
   .recipe-card__thumbnail {
     background: #CCC;
