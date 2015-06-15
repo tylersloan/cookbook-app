@@ -2,6 +2,18 @@
 
 angular.module('ngCookbook')
   .controller('MainCtrl', function ($scope) {
+
+    $scope.userControlItems = [
+      {
+        'title': 'Add Recipe',
+        'url': '/add-recipe'
+      },
+      {
+        'title': 'Log Out',
+        'url': '/signin'
+      }
+    ];
+
     $scope.awesomeThings = [
       {
         'title': 'AngularJS',
