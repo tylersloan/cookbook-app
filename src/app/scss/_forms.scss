@@ -1,0 +1,36 @@
+input,
+textarea {
+    @extend %input;
+    width: 100%;
+}
+
+input,
+textarea {
+    appearance: none;
+}
+
+.form {
+    padding: 1.5em;
+
+    &--signin {
+        @extend %centeredXY;
+        @extend %z1-shadow;
+        background: $color--medium;
+        max-width: 425px;
+        width: 50%;
+    }
+
+    &__fieldset {
+        margin-bottom: 1em;
+    }
+
+    &__label {
+        display: block;
+        font-size: 70%;
+        margin-bottom: 0.25em;
+    }
+}
+
+
+
+

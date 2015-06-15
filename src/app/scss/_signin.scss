@@ -1,0 +1,23 @@
+.signin {
+
+    header {
+        @extend %centeredX;
+        left: 50%;
+
+        h1 {
+            color: $color--medium;
+        }
+    }
+
+    &:before {
+        background: $color--dark;
+        content: '';
+        display: block;
+        height: 50%;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+}
