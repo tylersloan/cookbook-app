@@ -1,6 +1,15 @@
 'use strict';
 
 angular.module('ngCookbook')
-  .controller('HeaderCtrl', function ($scope) {
-    $scope.date = new Date();
+  .controller('headerCtrl', function ($scope) {
+    $scope.userControlItems = [
+      {
+        'title': 'Add Recipe',
+        'url': '/add-recipe'
+      },
+      {
+        'title': 'Log Out',
+        'url': '/signin'
+      }
+    ];
   });

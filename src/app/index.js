@@ -7,6 +7,10 @@ angular.module('ngCookbook', ['ngRoute'])
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
       })
+      .when('/signin', {
+        templateUrl: 'app/signin/signin.html',
+        controller: 'SignInCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
