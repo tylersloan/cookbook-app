@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngCookbook')
+ngCookbook
   .controller('MainCtrl', function ($scope) {
 
     $scope.userControlItems = [
