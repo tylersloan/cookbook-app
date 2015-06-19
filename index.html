@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ember Cookbook</title>
+
+    <link rel="stylesheet" href="css/styles.css"/>
+
+    <script src="libs/jquery.js"></script>
+    <script src="libs/handlebars.js"></script>
+    <script src="libs/ember.js"></script>
+    <script src="libs/ember-handlebars-loader.js"></script>
+
+    <script src="app.js"></script>
+    <script src="router.js"></script>
+    <script src="controllers/create.js"></script>
+    <!--<script src="controllers/application.js"></script>-->
+
+    <script>
+        EmberHandlebarsLoader.loadTemplates([
+            'application', 'recipes', 'create', 'signin', 'recipe', 'signup', 'home'
+        ]);
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

@@ -1,3 +1,0 @@
-# cookbook
-
-[Describe the project.]
