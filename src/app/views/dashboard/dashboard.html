@@ -6,39 +6,11 @@
         </a>
     </div>
 
-    <div class="recipe-card flex-item">
-        <a href="/#/recipe" class="recipe-card__thumbnail">
-            <img src="https://download.unsplash.com/photo-1423483641154-5411ec9c0ddf" alt="">
+    <div ng-repeat="recipe in recipes" class="recipe-card flex-item">
+        <a href="/#/recipe/{{recipe.id}}" class="recipe-card__thumbnail">
+            <img src="{{recipe.image}}" alt="Image: {{recipe.name}}"/>
         </a>
-        <h1 class="recipe-card__title">Recipe Name</h1>
-    </div>
-
-    <div class="recipe-card flex-item">
-        <a href="/#/recipe" class="recipe-card__thumbnail">
-            <img src="https://download.unsplash.com/photo-1423483641154-5411ec9c0ddf" alt="">
-        </a>
-        <h1 class="recipe-card__title">Recipe Name</h1>
-    </div>
-
-    <div class="recipe-card flex-item">
-        <a href="/#/recipe" class="recipe-card__thumbnail">
-            <img src="https://download.unsplash.com/photo-1423483641154-5411ec9c0ddf" alt="">
-        </a>
-        <h1 class="recipe-card__title">Recipe Name</h1>
-    </div>
-
-    <div class="recipe-card flex-item">
-        <a href="/#/recipe" class="recipe-card__thumbnail">
-            <img src="https://download.unsplash.com/photo-1423483641154-5411ec9c0ddf" alt="">
-        </a>
-        <h1 class="recipe-card__title">Recipe Name</h1>
-    </div>
-
-    <div class="recipe-card flex-item">
-        <a href="/#/recipe" class="recipe-card__thumbnail">
-            <img src="https://download.unsplash.com/photo-1423483641154-5411ec9c0ddf" alt="">
-        </a>
-        <h1 class="recipe-card__title">Recipe Name</h1>
+        <h1 class="recipe-card__title">{{recipe.name}}</h1>
     </div>
 
 </div>
