@@ -5,3 +5,5 @@ bower_components/
 dist/
 .DS_Store
 src/assets/.DS_Store
+src/.idea/
+.idea/

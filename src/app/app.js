@@ -12,13 +12,13 @@ ngCookbook.config(function ($routeProvider) {
         templateUrl: 'app/views/signin/signin.html',
         controller: 'SignInCtrl'
     })
+    .when('/recipe', {
+        templateUrl: 'app/views/view-recipe/recipe.html'
+        //controller: 'ViewRecipeCtrl'
+    })
     .when('/new-recipe', {
         templateUrl: 'app/views/new-recipe/new-recipe.html',
         controller: 'NewRecipeCtrl'
-    })
-    .when('/recipe', {
-        templateUrl: 'app/views/view-recipe/recipe.html',
-        controller: 'ViewRecipeCtrl'
     })
     .otherwise({
         redirectTo: '/'

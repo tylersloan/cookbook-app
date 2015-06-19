@@ -1,15 +1,16 @@
 'use strict';
 
 angular.module('ngCookbook')
-  .controller('headerCtrl', function ($scope) {
+  .controller('HeaderCtrl', function ($scope) {
+
     $scope.userControlItems = [
       {
         'title': 'Add Recipe',
-        'url': '/add-recipe'
+        'url': '/#/new-recipe'
       },
       {
         'title': 'Log Out',
-        'url': '/signin'
+        'url': '/#/signin'
       }
     ];
   });
