@@ -10,13 +10,13 @@ textarea {
 }
 
 .form {
-    padding: 1.5em;
 
     &--signin {
         @extend %centeredXY;
         @extend %z1-shadow;
         background: $color--medium;
         max-width: 425px;
+        padding: 1.5em;
         width: 50%;
     }
 
