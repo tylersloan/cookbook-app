@@ -1,56 +1,48 @@
-/* Model */
-var Recipe = Backbone.Model.extend({
+window.Tutorial = {
+    Models: {},
+    Collections: {},
+    Views: {}
+};
 
+Tutorial.Models.Recipe = Backbone.Model.extend({
     defaults: {
         name: 'Recipe Name',
-        judgement: 'good'
+        category: 'dinner'
     }
-
 });
 
-/* View */
-var RecipeView = Backbone.View.extend({
-    tagName: 'li',
-    className: 'recipe-class',
-
-    events: {
-        'click .recipe-class': 'log'
-    },
-
-    template: _.template('<%= name %> is <%= judgement %>'),
-
+Tutorial.Views.Recipe = Backbone.View.extend({
+    tagName: 'ul',
+    className: 'recipe',
+    template: _.template($('#recipes-template').html()),
     initialize: function () {
         this.render();
     },
-
     render: function () {
         this.$el.html(this.template(this.model.toJSON()));
     }
 });
 
-/* Collection */
-var RecipeCollection = Backbone.Collection.extend({
-    model: Recipe
+Tutorial.Collections.Recipe = Backbone.Collection.extend({
+    model: Tutorial.Models.Recipe
 });
 
-/* Manually add models to collection */
-var recipeCollection = new RecipeCollection([
+var recipesCollection = new Tutorial.Collections.Recipe([
     {
-        name: 'Soup',
-        judgement: 'soupy'
+        name: 'Salad',
+        category: 'appetizer'
     },
     {
-        name: 'Burger',
-        judgement: 'delicious'
+        name: 'Hamburger',
+        category: 'lunch'
     },
     {
         name: 'Cheesecake',
-        judgement: 'to die for'
+        category: 'dessert'
     }
 ]);
 
-/* All Recipes View */
-var RecipesView = Backbone.View.extend({
+Tutorial.Views.Recipes = Backbone.View.extend({
     tagName: 'ul',
 
     initialize: function () {
@@ -59,14 +51,11 @@ var RecipesView = Backbone.View.extend({
 
     render: function () {
         this.collection.each(function (Recipe) {
-            var recipeView = new RecipeView({ model: Recipe });
+            var recipeView = new Tutorial.Views.Recipe({ model: Recipe });
             $('body').append(recipeView.el);
         })
     }
 });
 
-var recipesView = new RecipesView({
-    collection: recipeCollection
-});
-
+var recipesView = new Tutorial.Views.Recipes({ collection: recipesCollection });
 recipesView.render();
