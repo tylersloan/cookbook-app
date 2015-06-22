@@ -1,7 +1,8 @@
 window.Tutorial = {
     Models: {},
     Collections: {},
-    Views: {}
+    Views: {},
+    Router: {}
 };
 
 Tutorial.Models.Recipe = Backbone.Model.extend({
@@ -30,15 +31,15 @@ Tutorial.Collections.Recipe = Backbone.Collection.extend({
 var recipesCollection = new Tutorial.Collections.Recipe([
     {
         name: 'Salad',
-        category: 'appetizer'
+        image_url: 'https://download.unsplash.com/photo-1423483641154-5411ec9c0ddf'
     },
     {
         name: 'Hamburger',
-        category: 'lunch'
+        image_url: 'https://download.unsplash.com/photo-1423483641154-5411ec9c0ddf'
     },
     {
         name: 'Cheesecake',
-        category: 'dessert'
+        image_url: 'https://download.unsplash.com/photo-1423483641154-5411ec9c0ddf'
     }
 ]);
 
@@ -59,3 +60,22 @@ Tutorial.Views.Recipes = Backbone.View.extend({
 
 var recipesView = new Tutorial.Views.Recipes({ collection: recipesCollection });
 recipesView.render();
+
+/* Router */
+Tutorial.Router = Backbone.Router.extend({
+    routes: {
+        '': 'index',
+        'recipe/:id': 'recipe'
+    },
+
+    index: function () {
+        console.log('index route');
+    },
+
+    recipe: function (id) {
+        console.log('view recipe with ID: ' + id);
+    }
+});
+
+var newRouter = new Tutorial.Router;
+Backbone.history.start();

@@ -3,16 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Backbone.js Tutorial</title>
+
+    <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/underscore-min.js"></script>
 <script src="js/backbone-min.js"></script>
 
-<!-- external template -->
-<script id="recipes-template" type="text/template">
-    <%= name %> is a <%= category %>.
-</script>
+<section class="wrapper">
+
+    <!-- Templates -->
+
+
+
+    <script id="recipes-template" type="text/template">
+        <div class="flex-container">
+
+            <div class="recipe-card recipe-card--add-recipe flex-item js-add-recipe">
+                <a href="/" class="recipe-card__thumbnail">
+                    <img src="https://placehold.it/243x162/ccc/222?text=Add+Recipe" alt="">
+                </a>
+            </div>
+
+            <div class="recipe-card flex-item">
+                <a href="/" class="recipe-card__thumbnail">
+                    <img src="<%= image_url %>" alt="Image: <%= name %>">
+                </a>
+                <h1 class="recipe-card__title"><%= name %></h1>
+            </div>
+
+        </div>
+
+    </script>
+
+</section>
 
 <script src="js/app.js"></script>
 </body>
