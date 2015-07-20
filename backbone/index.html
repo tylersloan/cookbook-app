@@ -2,21 +2,15 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Backbone.js Tutorial</title>
+    <title>Backbone Cookbook App</title>
 
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/underscore-min.js"></script>
-<script src="js/backbone-min.js"></script>
 
 <section class="wrapper">
 
     <!-- Templates -->
-
-
-
     <script id="recipes-template" type="text/template">
         <div class="flex-container">
 
@@ -39,6 +33,14 @@
 
 </section>
 
+<script src="js/lib/jquery-1.11.3.min.js"></script>
+<script src="js/lib/underscore-min.js"></script>
+<script src="js/lib/backbone-min.js"></script>
+
+<script src="js/models/recipe.js"></script>
+<script src="js/collections/cookbook.js"></script>
+<script src="js/views/recipe.js"></script>
+<script src="js/views/cookbook.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
