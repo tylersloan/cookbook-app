@@ -50,6 +50,7 @@ tags
 *.zip
 
 # Packages
+**/node_modules/*
 node_modules/*
 .tmp
 test/
