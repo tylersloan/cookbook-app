@@ -1,3 +1,3 @@
-/**
- * Created by Tyler on 7/20/15.
- */
+app.Cookbook = Backbone.Collection.extend({
+	model: app.Recipe
+})
