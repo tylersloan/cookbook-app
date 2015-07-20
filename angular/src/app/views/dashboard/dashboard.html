@@ -1,0 +1,16 @@
+<div class="flex-container">
+
+    <div class="recipe-card recipe-card--add-recipe flex-item js-add-recipe">
+        <a href="/#/new-recipe" class="recipe-card__thumbnail">
+            <img src="https://placehold.it/243x162/ccc/222?text=Add+Recipe" alt="">
+        </a>
+    </div>
+
+    <div ng-repeat="recipe in recipes" class="recipe-card flex-item">
+        <a href="/#/recipe/{{recipe.id}}" class="recipe-card__thumbnail">
+            <img src="{{recipe.image}}" alt="Image: {{recipe.name}}"/>
+        </a>
+        <h1 class="recipe-card__title">{{recipe.name}}</h1>
+    </div>
+
+</div>

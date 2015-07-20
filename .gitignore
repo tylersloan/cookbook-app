@@ -1,5 +1,4 @@
 .DS_Store
-<<<<<<< HEAD
 .localized
 .LSOverride
 .Spotlight-V100
@@ -29,7 +28,6 @@ tags
 *.swo
 *.swp
 ._*
-*~
 
 # Ignore packages #
 *.7z
@@ -61,4 +59,12 @@ site
 # hide the AWS and Rsync credentials file
 aws-credentials.json
 rsync-credentials.json
+node_modules/
+bower_components/
+.sass-cache/
+.tmp/
+dist/
+.DS_Store
+src/assets/.DS_Store
+src/.idea/
 .idea/
