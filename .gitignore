@@ -1,13 +1,5 @@
-# .gitignore for jekyllized projects
-
-# Ignore hidden folders
-# This takes care of .tmp, .sass-cache, and many others
-.*/
-
-# OSX
-._*
-.AppleDouble
 .DS_Store
+<<<<<<< HEAD
 .localized
 .LSOverride
 .Spotlight-V100
@@ -69,3 +61,4 @@ site
 # hide the AWS and Rsync credentials file
 aws-credentials.json
 rsync-credentials.json
+.idea/
