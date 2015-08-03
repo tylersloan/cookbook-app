@@ -12,5 +12,10 @@ app.CookbookView = Backbone.View.extend({
 		}, this)
 	}
 
-	// not finished
-})
+	renderRecipe: function( item ) {
+		var recipeView = new app.RecipeView({
+			model: item
+		});
+		this.$el.append( recipeView.render().el );
+	}
+});
