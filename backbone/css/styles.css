@@ -176,6 +176,10 @@ input, textarea {
     display: block;
     width: 100%; }
 
+.recipe__hero {
+	width: 100%;
+}
+
 .signin header {
     left: 50%; }
 .signin header h1 {

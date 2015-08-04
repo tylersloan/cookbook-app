@@ -18,6 +18,9 @@
 </header>
 
 
+<div class="recipe-view-classname" id="recipes-container"></div>
+
+
 <main role="main">
 
   <section class="wrapper">
@@ -116,7 +119,7 @@
             <li>Edit Recipe</li>
             <li>Delete Recipe</li>
           </ul>
-          <img src="" alt="image: <%= image %>" class="recipe__hero">
+          <img src="<%= image %>" alt="image:" class="recipe__hero">
           <h1 class="recipe__name"><%= name %> <small> by <%= author %></small></h1>
           <ul class="recipe__meta">
             <li><%= category %></li>

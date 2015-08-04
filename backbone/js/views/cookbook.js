@@ -10,7 +10,7 @@ app.CookbookView = Backbone.View.extend({
 		this.collection.each(function( item ) {
 			this.renderRecipe( item );
 		}, this)
-	}
+	},
 
 	renderRecipe: function( item ) {
 		var recipeView = new app.RecipeView({
