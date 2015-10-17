@@ -1,6 +1,6 @@
 app.Recipe = Backbone.Model.extend({
 	defaults: {
-		image: 'https://download.unsplash.com/photo-1437384423356-1aed23732c43',
+		image: '/images/recipe-photo.jpg',
 		name: 'No Recipe Name',
 		author: 'Unknown Author',
 		category: 'Unknown',

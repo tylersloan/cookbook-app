@@ -1,7 +1,7 @@
 $(function() {
 	var recipes = [
 		{
-			image: 'https://download.unsplash.com/photo-1437384423356-1aed23732c43',
+			image: '/images/recipe-photo.jpg',
 			name: 'Recipe One Name',
 			author: 'Tyler Sloan',
 			category: 'Dinner',

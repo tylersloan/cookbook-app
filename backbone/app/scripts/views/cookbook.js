@@ -1,6 +1,10 @@
 app.CookbookView = Backbone.View.extend({
 	el: '#recipes',
 
+	events: {
+		'click #js-save-recipe': 'saveRecipe'
+	},
+
 	initialize: function( initialRecipes ) {
 		this.collection = new app.Cookbook( initialRecipes );
 		this.render();
