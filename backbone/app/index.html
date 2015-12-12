@@ -17,7 +17,7 @@
     <!-- endbuild -->
 </head>
 
-<body>
+<body id="js-test">
     <header class="flex-container">
         <h1 class="flex-item"><a href="/">Cookbook</a></h1>
         <div class="user-controls flex-item">
@@ -26,28 +26,27 @@
         </div>
     </header>
 
-    <div id="recipes"></div>
-    <div class="recipe-view-classname" id="recipes-container"></div>
+    <!-- <div class="recipe-view-classname"></div> -->
 
     <main role="main">
         <section class="wrapper">
-            <div class="flex-container">
-                <form class="form form--create-recipe" action="">
+            <div class="flex-container"  id="recipes">
+                <form class="form form--create-recipe" id="js-add-recipe-form" action="#">
                     <div class="form__fieldset">
                         <label class="form__label" for="image">Image</label>
-                        <input type="file" class="form__input" id="image">
+                        <input type="file" class="form__input" id="recipe_image">
                     </div>
                     <div class="form__fieldset">
                         <label class="form__label" for="recipe-name">Recipe name:</label>
-                        <input type="text" class="form__input" id="recipe-name">
+                        <input type="text" class="form__input" id="recipe_name">
                     </div>
                     <div class="form__fieldset">
                         <label class="form__label" for="recipe-author">Recipe by:</label>
-                        <input type="text" class="form__input" id="recipe-author">
+                        <input type="text" class="form__input" id="recipe_author">
                     </div>
                     <div class="form__fieldset">
                         <label class="form__label" for="recipe-type">Recipe Type</label>
-                        <select name="recipe-type" id="recipe-type">
+                        <select name="recipe-type" id="recipe_category">
                             <option value="breakfast">Breakfast</option>
                             <option value="lunch">Lunch</option>
                             <option value="dinner">Dinner</option>
@@ -56,44 +55,44 @@
                     </div>
                     <div class="form__fieldset">
                         <label class="form__label" for="prep-time">Prep Time</label>
-                        <input type="text" class="form__input" id="prep-time">
+                        <input type="text" class="form__input" id="prep_time">
                     </div>
                     <div class="form__fieldset">
                         <label class="form__label" for="cook-time">Cook Time</label>
-                        <input type="text" class="form__input" id="cook-time">
+                        <input type="text" class="form__input" id="cook_time">
                     </div>
                     <div class="form__fieldset">
                         <label class="form__label" for="Cook Temperature">Cook Temperature</label>
-                        <input type="text" class="form__input" id="Cook Temperature">
+                        <input type="text" class="form__input" id="cook_temperature">
                     </div>
                     <hr>
                     <p>How many of what will this recipe yield?</p>
                     <div class="form__fieldset">
                         <label class="form__label" for="yield-amount">How many?</label>
-                        <input type="text" class="form__input" id="yield-amount">
+                        <input type="text" class="form__input" id="yield_key">
                     </div>
                     <div class="form__fieldset">
                         <label class="form__label" for="yield-value">What?</label>
-                        <input type="text" class="form__input" id="yield-value">
+                        <input type="text" class="form__input" id="yield_value">
                     </div>
                     <hr>
                     <p>Ingredients</p>
                     <div class="form__fieldset">
                         <label class="form__label" for="ingredient">Ingredient</label>
-                        <input type="text" class="form__input" id="ingredient-amount">
-                        <input type="text" class="form__input" id="ingredient-name">
+                        <input type="text" class="form__input" id="ingredient_value">
+                        <input type="text" class="form__input" id="ingredient_key">
                     </div>
-                    <button id="js-add-ingredient" class="button button--dark">Add Another Ingredient</button>
+                    <!-- <button id="js-add-ingredient" class="button button--dark">Add Another Ingredient</button> -->
                     <hr>
                     <div class="form__fieldset">
                         <label class="form__label" for="recipe-directions">Directions:</label>
-                        <input type="text" class="form__input" id="recipe-directions    ">
+                        <input type="text" class="form__input" id="recipe_directions">
                     </div>
                     <div class="form__fieldset">
                         <label class="form__label" for="other-notes">Any other notes?</label>
-                        <input type="text" class="form__input" id="other-notes">
+                        <input type="text" class="form__input" id="other_notes">
                     </div>
-                    <button class="button button--dark" id="js-save-recipe" type="submit">Save Recipe</button>
+                    <button class="button button--dark" id="js-save-recipe">Save Recipe</button>
                 </form>
             </div>
         </section>
@@ -103,15 +102,11 @@
     <script id="js-tmpl-view-recipe" type="text/template">
         <div class="flex-container">
             <section class="recipe">
-                <ul class="recipe__options">
-                    <li>Edit Recipe</li>
-                    <li>Delete Recipe</li>
-                </ul>
-                <img src="<%= image %>" alt="image:" class="recipe__hero">
-                <h1 class="recipe__name"><%= name %> <small> by <%= author %></small></h1>
+                <img src="<%= recipe_image %>" alt="image:" class="recipe__hero">
+                <h1 class="recipe__name"><%= name %> <small> by <%= recipe_author %></small></h1>
                 <ul class="recipe__meta">
                     <li>
-                        <%= category %>
+                        <%= recipe_category %>
                     </li>
                     <li>Prep Time:
                         <%= prep_time %>
@@ -130,16 +125,17 @@
                 <p>Ingredients &amp; Directions</p>
                 <ul class="recipe__ingredients">
                     <li>
-                        <%= ingredient_amount %>
-                            <%= ingredient_name  %>
+                        <%= ingredient_value %>
+                            <%= ingredient_key  %>
                     </li>
                 </ul>
                 <p>
-                    <%= directions %>
+                    <%= recipe_directions %>
                 </p>
                 <p>
-                    <%= notes %>
+                    <%= other_notes %>
                 </p>
+                <button class="button button--dark js-delete">Delete Recipe</button>
             </section>
         </div>
     </script>
@@ -152,16 +148,15 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
-    <script src="/bower_components/underscore/underscore.js"></script>
-    <script src="/bower_components/backbone/backbone.js"></script>
-    <script>
+    <script src="/scripts/cookbook-app.js"></script>
+    <!-- <script>
     var app = app || {};
     </script>
     <script src="/scripts/models/recipe.js"></script>
     <script src="/scripts/collections/cookbook.js"></script>
     <script src="/scripts/views/recipe.js"></script>
     <script src="/scripts/views/cookbook.js"></script>
-    <script src="/scripts/app.js"></script>
+    <script src="/scripts/app.js"></script> -->
     <!-- endbuild -->
 </body>
 
