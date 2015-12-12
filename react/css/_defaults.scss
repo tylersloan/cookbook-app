@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+main {
+    height: 100%;
+}
+
+body {
+    background: $color--light;
+    color: $color--dark;
+    font: {
+        family: "Helvetica Neue", sans-serif;
+        size: 16px;
+    }
+    line-height: 1.55;
+}
+
+main {
+    position: relative;
+}
+
+.wrapper {
+    margin: 5% auto;
+    width: 90%;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $color--medium;
+  }
+}

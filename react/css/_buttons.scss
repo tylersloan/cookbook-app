@@ -1,0 +1,24 @@
+.button {
+    appearance: none;
+    border: none;
+    padding: .65em;
+
+    &--dark {
+        background: $color--dark;
+        color: $color--light;
+    }
+
+    &--light {
+        background: $color--light;
+        color: $color--dark;
+    }
+
+    &[type="submit"] {
+        width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+        background: darken($color--medium,10%);
+    }
+}

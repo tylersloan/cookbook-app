@@ -1,0 +1,212 @@
+/***************/
+/* MEYER RESET */
+/***************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+.signin header {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+
+.form--signin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%); }
+
+.form--signin {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+input,
+textarea {
+  border: 0px solid #CCC;
+  padding: 0.65em; }
+
+* {
+  box-sizing: border-box; }
+
+html,
+body,
+main {
+  height: 100%; }
+
+body {
+  background: #EEE;
+  color: #222;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.55; }
+
+main {
+  position: relative; }
+
+.wrapper {
+  margin: 5% auto;
+  width: 90%; }
+
+a {
+  text-decoration: none; }
+  a:hover, a:focus {
+    color: #CCC; }
+
+.flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.flex-item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto; }
+
+header {
+  background: #222;
+  padding: 2em 5%; }
+
+h1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; }
+  h1 a {
+    color: #EEE; }
+
+.user-controls {
+  color: #EEE;
+  text-align: right; }
+  .user-controls a {
+    margin: 0 5px; }
+
+input,
+textarea {
+  width: 100%; }
+
+input,
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
+.form {
+  padding: 1.5em; }
+  .form--signin {
+    background: #CCC;
+    max-width: 425px;
+    width: 50%; }
+  .form__fieldset {
+    margin-bottom: 1em; }
+  .form__label {
+    display: block;
+    font-size: 70%;
+    margin-bottom: 0.25em; }
+
+.button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  padding: .65em; }
+  .button--dark {
+    background: #222;
+    color: #EEE; }
+  .button--light {
+    background: #EEE;
+    color: #222; }
+  .button[type="submit"] {
+    width: 100%; }
+  .button:hover, .button:focus {
+    background: #b3b3b3; }
+
+.recipe-card {
+  color: #222;
+  -webkit-flex-basis: 25%;
+      -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
+  margin: 0 .25em 3em;
+  text-align: center; }
+  .recipe-card__thumbnail {
+    background: #CCC;
+    display: block; }
+    .recipe-card__thumbnail img {
+      display: block;
+      width: 100%; }
+
+.signin header {
+  left: 50%; }
+  .signin header h1 {
+    color: #CCC; }
+
+.signin:before {
+  background: #222;
+  content: '';
+  display: block;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0; }
+
+#__bs_notify__ {
+  display: none !important; }
