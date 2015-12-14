@@ -54,10 +54,11 @@ var App = React.createClass({
 				<main role="main">
 					<section className="wrapper">
 						<div className="flex-container">
-							{/*<RenderedRecipe {...this.props} />*/}
-							<ul className="list-of-recipes">
+							<section class="recipe">
+								<ul>
 								{Object.keys(this.state.recipes).map(this.renderRecipe)}
-							</ul>
+								</ul>
+							</section>
 						</div>
 
 						<br/>
@@ -83,8 +84,8 @@ var Recipe = React.createClass({
 		var details = this.props.details;
 		return (
 			<li>
-				<h1>{details.recipeName}</h1>
-				<p>by: {details.recipeCreator}</p>
+				<h1 className="recipe__name">{details.recipeName} <div><small>by {details.recipeCreator}</small></div></h1>
+				<br/>
 			</li>
 		)
 	}
