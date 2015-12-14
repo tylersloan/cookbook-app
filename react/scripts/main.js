@@ -35,6 +35,16 @@ var App = React.createClass({
 		this.setState({ recipes: this.state.recipes });
 	},
 
+	loadSampleRecipes: function() {
+		this.setState({
+			recipes: require('./sample-recipes.js')
+		});
+	},
+
+	renderRecipe: function(key) {
+		return <Recipe key={key} index={key} details={this.state.recipes[key]} />
+	},
+
 	render: function() {
 		var you = this.props.params.yourName;
 		return (
@@ -44,7 +54,10 @@ var App = React.createClass({
 				<main role="main">
 					<section className="wrapper">
 						<div className="flex-container">
-							<RenderedRecipe/>
+							{/*<RenderedRecipe {...this.props} />*/}
+							<ul className="list-of-recipes">
+								{Object.keys(this.state.recipes).map(this.renderRecipe)}
+							</ul>
 						</div>
 
 						<br/>
@@ -52,7 +65,7 @@ var App = React.createClass({
 						<br/>
 
 						<div className="flex-container">
-							<CreateRecipeForm addRecipe={this.addRecipe} chef={you} />
+							<CreateRecipeForm loadSampleRecipes={this.loadSampleRecipes} addRecipe={this.addRecipe} chef={you} />
 						</div>
 					</section>
 				</main>
@@ -60,6 +73,22 @@ var App = React.createClass({
 		)
 	}
 });
+
+/*
+Recipe
+<Recipe />
+ */
+var Recipe = React.createClass({
+	render: function() {
+		var details = this.props.details;
+		return (
+			<li>
+				<h1>{details.recipeName}</h1>
+				<p>by: {details.recipeCreator}</p>
+			</li>
+		)
+	}
+})
 
 /*
 Header
@@ -140,21 +169,25 @@ var CreateRecipeForm = React.createClass({
 
 	render: function() {
 		return (
-			<form onSubmit={this.createRecipe} >
-				<h2>Enter a recipe, !</h2>
+			<div>
+				<form onSubmit={this.createRecipe} >
+					<h2>Enter a recipe, !</h2>
 
-				<div className="form__fieldset">
-				    <label className="form__label">Recipe name</label>
-				    <input type="text" className="form__input" ref="recipeName" />
-				</div>
+					<div className="form__fieldset">
+					    <label className="form__label">Recipe name</label>
+					    <input type="text" className="form__input" ref="recipeName" />
+					</div>
 
-				<div className="form__fieldset">
-				    <label className="form__label">Recipe creator</label>
-				    <input type="text" className="form__input" ref="recipeCreator" />
-				</div>
+					<div className="form__fieldset">
+					    <label className="form__label">Recipe creator</label>
+					    <input type="text" className="form__input" ref="recipeCreator" />
+					</div>
 
-				<button className="button button--dark">Save Recipe</button>
-			</form>
+					<button className="button button--dark">Save Recipe</button>
+				</form>
+
+				<button  className="" onClick={this.props.loadSampleRecipes}>Add Sample Recipes</button>
+			</div>
 		)
 	}
 });
@@ -166,7 +199,9 @@ RenderedRecipe
 var RenderedRecipe = React.createClass({
 	render: function() {
 		return (
-			<h1>Here are your recipes.</h1>
+			<ul className="list-of-recipes">
+				{Object.keys(this.state.recipes).map(this.renderRecipe)}
+			</ul>
 		)
 	}
 });
